@@ -1,0 +1,71 @@
+body {
+  background-color: #000000; }
+
+.box, .container_k h1 {
+  margin: 0 auto 25px;
+  border: 1px solid;
+  padding: 15px;
+  background-color: #ffffff; }
+
+.grid, .grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #dddddd;
+  padding: 5px; }
+
+.container_k {
+  max-width: 1140px; }
+
+.grid_1 {
+  max-width: 75px; }
+
+.grid_2 {
+  max-width: 170px; }
+
+.grid_3 {
+  max-width: 265px; }
+
+.grid_4 {
+  max-width: 360px; }
+
+.grid_5 {
+  max-width: 455px; }
+
+.grid_6 {
+  max-width: 550px; }
+
+.grid_7 {
+  max-width: 645px; }
+
+.grid_8 {
+  max-width: 740px; }
+
+.grid_9 {
+  max-width: 835px; }
+
+.grid_10 {
+  max-width: 930px; }
+
+.grid_11 {
+  max-width: 1025px; }
+
+.grid_12 {
+  max-width: 1120px; }
+
+.container_k figure {
+  max-width: 100% !important;
+  height: auto !important; }
+
+.kbtn {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 5px 10px;
+  font-size: 12px;
+  border: 1px solid #090909; }
+  .kbtn:hover {
+    background-color: #090909;
+    color: #ffffff; }
+
+/*# sourceMappingURL=style.css.map */

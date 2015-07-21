@@ -1,0 +1,84 @@
+//* ---------------------------------------------
+//* Variables
+//* ---------------------------------------------*/
+$width: 1140px;
+$gutter: 20px;
+$columns: 12;
+$column_width: $width / $columns;
+
+//* ---------------------------------------------
+//* Basic
+//* ---------------------------------------------*/
+body{
+	background-color: #000000;
+}
+
+.box{
+	margin: 0 auto 25px;
+	border:1px solid;
+	padding: 15px;
+	background-color: #ffffff;
+}
+
+//* ---------------------------------------------
+//* Grid
+//* ---------------------------------------------*/
+.grid{
+	position: relative;
+	float: left;
+	margin-left: $gutter / 2;
+	margin-right: $gutter / 2;
+	border:1px solid #dddddd;
+	padding: 5px;
+}
+
+.container_k{
+	max-width: $width;
+}
+
+//* ---------------------------------------------
+//* Loops
+//* ---------------------------------------------*/
+
+@for $i from 1 through $columns{
+	.grid_#{$i}{
+		@extend .grid;
+		max-width: $i * $column_width - $gutter;
+	}
+}
+
+
+//* ---------------------------------------------
+//* Responsive
+//* ---------------------------------------------*/
+.container_k figure{
+	max-width: 100% !important;
+	height: auto !important;
+}
+
+//* ---------------------------------------------
+//* Buttons
+//* ---------------------------------------------*/
+
+.kbtn{
+	background-color: #222222;
+	color: #ffffff;
+	padding: 5px 10px;
+	font-size: 12px;
+	border:1px solid #090909;
+
+	&:hover{
+		background-color: #090909;
+		color: #ffffff;
+	}
+}
+
+
+//* ---------------------------------------------
+//* Font Styles
+//* ---------------------------------------------*/
+.container_k h1{
+	@extend .box;
+
+}
+

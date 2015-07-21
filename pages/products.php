@@ -8,32 +8,33 @@
 				</h1>
 			</header>
 
+			<div class="container_k">
 			<?php 
 				foreach ($posts_array as $post) { 
 					setup_postdata( $post );
 			?>
-				<article id="post-<?php the_ID();?>" <?php post_class();?> >
-					<!-- Article header -->
-					<header class="entry-header">
+						
+					<div class="grid_3">
 						<?php
 						// if the post has a thumbnail and it´s not password protected
 						// then display the thumbnail
 
 						if (has_post_thumbnail() && ! post_password_required() ) { ?>
-							<a href="<?php the_permalink();?>" rel="bookmark"><figure class="entry-thumbnail"><?php the_post_thumbnail();?></figure></a>
+							<a href="<?php the_permalink();?>" rel="bookmark">
+								<figure class="entry-thumbnail"><?php the_post_thumbnail();?></figure>
+							</a>
 						<?php }else{?>
-							<a href="<?php the_permalink();?>" rel="bookmark"><figure class="entry-thumbnail"><img src="<?php echo plugins_url( 'assets/img/product.png', __FILE__ );?>" alt="<?php the_title(); ?>"></figure></a>
+							<a href="<?php the_permalink();?>" rel="bookmark">
+								<figure class="entry-thumbnail"><img src="<?php echo plugins_url( 'assets/img/product.png', __FILE__ );?>" alt="<?php the_title(); ?>"></figure>
+							</a>
 						<?php
 						}
 						?>
-							<p><?php the_title();?></p>
-							<a href="<?php the_permalink(); ?>" class="btn"><?php _e( 'Product Information', 'kinvoice' ); ?></a>
-
-					</header><!-- end entry-header -->
-
-				</article>
-
+						<p><?php the_title();?></p>
+						<a href="<?php the_permalink(); ?>" class="kbtn"><?php _e( 'Product Information', 'kinvoice' ); ?></a>
+					</div><!-- will show 3 products per line -->
 			<?php } ?>
+			</div><!-- container for products -->
 
 
 
